@@ -11,7 +11,7 @@ node('master') {
 @NonCPS // has to be NonCPS or the build breaks on the call to .each
 def echo_all(list) {
     list.each { item ->
-        echo "Hello ${item}"
+        echo "Hello Hi ${item}"
     }
 }
 // outputs all items as expected
