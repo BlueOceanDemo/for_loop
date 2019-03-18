@@ -3,21 +3,8 @@
 abcs = ['a', 'b', 'c']
 
 node('master') {
-    stage('Test 1: loop of echo statements') {
+    stage('ADDING Service Checks to Nagios') {
         echo_all(abcs)
-    }
-    
-    stage('Test 2: loop of sh commands') {
-        loop_of_sh(abcs)
-    }
-    
-    stage('Test 3: loop with preceding SH') {
-        loop_with_preceding_sh(abcs)
-    }
-    
-    stage('Test 4: traditional for loop') {
-        traditional_int_for_loop(abcs)
-    }
 }
 
 @NonCPS // has to be NonCPS or the build breaks on the call to .each
@@ -28,21 +15,21 @@ def echo_all(list) {
 }
 // outputs all items as expected
 
-@NonCPS
-def loop_of_sh(list) {
-    list.each { item ->
+// @NonCPS
+// def loop_of_sh(list) {
+//    list.each { item ->
         sh "echo Hello ${item}"
-    }
-}
+//    }
+//}
 // outputs only the first item
 
-@NonCPS
-def loop_with_preceding_sh(list) {
-    sh "echo Going to echo a list"
-    list.each { item ->
-        sh "echo Hello ${item}"
-    }
-}
+//@NonCPS
+//def loop_with_preceding_sh(list) {
+//    sh "echo Going to echo a list"
+//    list.each { item ->
+//        sh "echo Hello ${item}"
+ //   }
+//}
 // outputs only the "Going to echo a list" bit
 
 // echoes everything as expected
