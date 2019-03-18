@@ -18,7 +18,7 @@ def echo_all(list) {
 // @NonCPS
 // def loop_of_sh(list) {
 //    list.each { item ->
-        sh "echo Hello ${item}"
+//        sh "echo Hello ${item}"
 //    }
 //}
 // outputs only the first item
