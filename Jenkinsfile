@@ -1,12 +1,6 @@
 // Related to https://issues.jenkins-ci.org/browse/JENKINS-26481
 
-abcs = [ '/prod/NorthAmericaClaims/USClaims/DG_Monitor_Test/Folder A',
-        '/prod/NorthAmericaClaims/USClaims/DG_Monitor_Test/Folder B',
-        '/prod/NorthAmericaClaims/USClaims/DG_Monitor_Test/Folder C',
-        '/prod/NorthAmericaClaims/USClaims/DG_Monitor_Test/Folder D',
-        '/prod/NorthAmericaClaims/USClaims/DG_Monitor_Test/Folder E',
-        '/prod/NorthAmericaClaims/USClaims/DG_Monitor_Test/Folder F',
-        '/prod/NorthAmericaClaims/USClaims/DG_Monitor_Test/Folder G',
+abcs = [
 ]
 
 node('master') {
