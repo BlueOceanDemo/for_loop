@@ -6,6 +6,7 @@ node('master') {
     stage('ADDING Service Checks to Nagios') {
         echo_all(abcs)
 }
+}
 
 @NonCPS // has to be NonCPS or the build breaks on the call to .each
 def echo_all(list) {
